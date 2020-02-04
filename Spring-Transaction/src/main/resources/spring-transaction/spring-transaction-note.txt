@@ -1,0 +1,32 @@
+全局事务
+多个资源使用 数据库和消息队列
+
+本地事务
+特定资源，JDBC关联事务
+
+PlatformTransactionManager
+TransactionDefinition
+隔离
+传播
+超时
+只读状态
+TransactionStatus
+控制事务执行和查询状态
+
+xml基于AOP实现的事务，rollback-for:
+@Transactional注解 --- 声明式事务
+
+Spring事务传播特性
+PROPAGATION_REQUIRED --- 加入当前正要执行的事务不在另一个事务中，那么就开启一个新事务
+methodB() --- B在methodA()中调用，如果A开启了事务B就不再开启新的事务，A没有开启事务，B则开启一个新事务
+A或B任意异常都会rollback，B commit A异常一样会全部回滚
+
+PROPAGATION_REQUIRED_NEW 执行到methodB()时，A会挂起，等待B完成才会继续执行，B commit A失败不会回滚，如果B失败
+A回捕获异常但不会回滚
+
+PROPAGATION_NESTED A事务如果回滚B也会回滚 ，B事务如果回滚并不会影响A事务的提交
+
+编程式事务
+TransactionTemplate
+PlatformTransactionManager
+

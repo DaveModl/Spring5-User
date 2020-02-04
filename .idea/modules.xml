@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BeanVaildor/BeanVaildor.iml" filepath="$PROJECT_DIR$/BeanVaildor/BeanVaildor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-Aop/Spring-Aop.iml" filepath="$PROJECT_DIR$/Spring-Aop/Spring-Aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-JDBC/Spring-JDBC.iml" filepath="$PROJECT_DIR$/Spring-JDBC/Spring-JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-MVC/Spring-MVC.iml" filepath="$PROJECT_DIR$/Spring-MVC/Spring-MVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Spring-Transaction/Spring-Transaction.iml" filepath="$PROJECT_DIR$/Spring-Transaction/Spring-Transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringEL/SpringEL.iml" filepath="$PROJECT_DIR$/SpringEL/SpringEL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringIoC/SpringIoC.iml" filepath="$PROJECT_DIR$/SpringIoC/SpringIoC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-Resource/spring-Resource.iml" filepath="$PROJECT_DIR$/spring-Resource/spring-Resource.iml" />
+    </modules>
+  </component>
+</project>

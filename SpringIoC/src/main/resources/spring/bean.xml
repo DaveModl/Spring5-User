@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--默认构造器-->
+    <bean id="defaultConstructor" class="com.ioc.newbean.DefaultConstructor"/>
+<!--    静态工厂-->
+    <bean id="staticFactory" class="com.ioc.newbean.StaticFactory" factory-method="getFactory"/>
+<!--    工厂-->
+    <bean id="factoryTest" class="com.ioc.newbean.FactoryTest"/>
+    <bean id="factory" factory-bean="factoryTest" factory-method="getFactory"/>
+</beans>

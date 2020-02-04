@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/SpringIoC/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-Aop/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-Resource/pom.xml" />
+        <option value="$PROJECT_DIR$/BeanVaildor/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringEL/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-Transaction/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-JDBC/pom.xml" />
+        <option value="$PROJECT_DIR$/Spring-MVC/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

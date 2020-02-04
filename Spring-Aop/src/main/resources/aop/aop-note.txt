@@ -1,0 +1,35 @@
+Aspect切面 --- 将关注点模块化
+@Aspect
+
+Join Point连接点 --- 在程序执行过程中某个特定的点，（方法调用处理异常）连接点代表一个方法的执行
+
+Adcice通知 --- 在切面的某个特定的连接点上执行的动作
+around
+before
+after
+
+Pointcut切点 --- 匹配连接点的断言
+AspectJ
+
+Introduction引入 --- 声明额外的方法或某个类型字段，允许引入新的接口到任何被通知的对象
+
+Target Object目标对象 --- 被一个或多个切面通知的对象
+
+Aop ProxyAOP代理 --- JDK/CGLIB
+
+Weaving织入 --- 把切面连接到其他的应用程序类型或对象上，并创建Advice（被通知的对象）,
+这些可以在编译时类加载或者运行时完成
+
+通知类型
+Before advice 前置通知 --- 在某连接点执行前的通知
+After returning advice 返回后通知 --- 在某连接点正常完成后执行通知
+After throwing advice 抛出异常后通知 --- 在方法抛出异常后的通知
+After advice 最后通知 --- 到某个连接点退出时执行的通知（不论是否正常退出）
+Around advice 环绕通知 --- 包围一个连接点的通知，方法调用
+
+JDK/CGLIB
+强制开启CGLIB
+<aop:config proxy-target-class="true">
+
+
+

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:component-scan base-package="com.ioc.property"/>
+    <bean id="attribute" class="com.ioc.property.Attribute"
+          p:name="Hname"
+          />
+    <bean id="properties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+            <list>
+                <value>classpath:myProps.properties</value>
+            </list>
+        </property>
+    </bean>
+    <bean id="mappings" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="properties" ref="properties"/>
+    </bean>
+
+    <bean id="otherAttribute" class="com.ioc.property.OtherAttribute">
+        <property name="prop">
+            <props>
+                <prop key="prop1">value1</prop>
+                <prop key="prop2">value</prop>
+            </props>
+        </property>
+
+        <property name="list">
+            <list>
+                <value>element</value>
+            </list>
+        </property>
+
+        <property name="map">
+            <map>
+                <entry key="entry1" value="mapValue"/>
+            </map>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>setValue</value>
+            </set>
+        </property>
+
+<!--        <property name="name" value=""/>-->
+        <property name="name">
+            <null/>
+        </property>
+    </bean>
+
+</beans>

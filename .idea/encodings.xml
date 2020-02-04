@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/BeanVaildor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/BeanVaildor/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-Aop/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-Aop/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-JDBC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-JDBC/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-MVC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-MVC/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-Transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Spring-Transaction/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringEL/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringEL/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringIoC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringIoC/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-Resource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spring-Resource/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

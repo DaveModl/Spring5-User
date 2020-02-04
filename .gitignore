@@ -1,0 +1,9 @@
+# Project exclude paths
+/BeanVaildor/target/
+/Spring-Aop/target/
+/Spring-JDBC/target/
+/Spring-MVC/target/
+/spring-Resource/target/
+/Spring-Transaction/target/
+/SpringEL/target/
+/SpringIoC/target/

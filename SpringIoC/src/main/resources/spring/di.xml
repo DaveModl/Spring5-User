@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--引用类型构造器注入-->
+    <bean id="foo" class="com.ioc.di.Foo">
+    <constructor-arg ref="bar"/>
+    <constructor-arg ref="fox"/>
+</bean>
+    <bean id="fox" class="com.ioc.di.Fox"/>
+    <bean id="bar" class="com.ioc.di.Bar"/>
+<!--    基本数据类型-->
+    <bean id="basicArgs" class="com.ioc.di.BasicArgs">
+        <constructor-arg index="0" type="int" value="10"/>
+        <constructor-arg index="1" type="java.lang.String" value="Arser"/>
+    </bean>
+<!--        setter方式注入-->
+    <bean id="setterDI" class="com.ioc.di.SetterDI">
+        <property name="description" value="hello setterDI"/>
+    </bean>
+</beans>

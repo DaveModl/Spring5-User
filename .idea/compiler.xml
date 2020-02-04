@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Spring-JDBC" />
+        <module name="SpringEL" />
+        <module name="BeanVaildor" />
+        <module name="Spring-Aop" />
+        <module name="Spring-MVC" />
+        <module name="SpringIoC" />
+        <module name="spring-Resource" />
+        <module name="Spring-Transaction" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="BeanVaildor" target="1.7" />
+      <module name="Spring-Aop" target="1.7" />
+      <module name="Spring-JDBC" target="1.7" />
+      <module name="Spring-MVC" target="1.7" />
+      <module name="spring-Resource" target="1.7" />
+      <module name="Spring-Transaction" target="1.7" />
+      <module name="SpringEL" target="1.7" />
+      <module name="SpringIoC" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

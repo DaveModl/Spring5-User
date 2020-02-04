@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="tax" class="com.el.exec.Tax" p:ctax="10"/>
+<!--bean属性-->
+    <bean id="list" class="com.el.exec.ShopList" p:name="shanpoo" p:count="2" p:price="#{tax.ctax/100 * 36.5}"/>
+<!--    bean方法-->
+    <bean id="list2" class="com.el.exec.ShopList" p:name="shanpoo" p:count="2" p:price="#{tax.getCtax()/100 * 36.5}"/>
+<!--    静态变量-->
+    <bean id="list3" class="com.el.exec.ShopList" p:name="#{T(com.el.exec.Tax).country}" p:count="2" p:price="1"/>
+<!--    静态方法-->
+    <bean id="list4" class="com.el.exec.ShopList" p:name="#{T(com.el.exec.Tax).getCountry()}" p:count="2" p:price="1"/>
+<!--    三元表达式-->
+    <bean id="list5" class="com.el.exec.ShopList" p:name="#{tax.getName()?: 'defaultTax'}" p:count="2" p:price="1"/>
+
+    <util:list id="its">
+        <bean class="com.el.exec.Item" p:goods="poke" p:weight="3.34"/>
+        <bean class="com.el.exec.Item" p:goods="chicken" p:weight="5.66"/>
+        <bean class="com.el.exec.Item" p:goods="dark" p:weight="3.64"/>
+        <bean class="com.el.exec.Item" p:goods="egg" p:weight="2.54"/>
+    </util:list>
+
+    <bean id="list6" class="com.el.exec.ShopList" p:name="#{tax.getName()?: 'defaultTax'}"
+          p:count="2" p:price="1" p:items-ref="its"/>
+
+    <bean id="list7" class="com.el.exec.ShopList" p:name="#{tax.getName()?: 'defaultTax'}"
+          p:count="2" p:price="1" p:oneGood="#{its[0]}"/>
+
+<!--    不使用ref-->
+<bean id="it1" class="com.el.exec.Item" p:goods="poke" p:weight="3.34"/>
+    <bean id="it2" class="com.el.exec.Item" p:goods="chicken" p:weight="5.66"/>
+    <util:map id="itmap">
+        <entry key="poke" value-ref="it1"/>
+        <entry key="chicken" value-ref="it2"/>
+    </util:map>
+<!--    map筛选-->
+    <bean id="list8" class="com.el.exec.ShopList" p:name="#{tax.getName()?: 'defaultTax'}"
+          p:count="2" p:price="1" p:oneGood="#{itmap['chicken']}"/>
+
+<!--    读取配置文件-->
+<util:properties id="itprop" location="classpath:spel.properties"/>
+    <bean id="list9" class="com.el.exec.ShopList" p:name="#{itprop['username']}"
+          p:price="1"/>
+
+    <bean id="list10" class="com.el.exec.ShopList" p:items="#{its.?[weight lt 3.5]}"/>
+    <bean id="list11" class="com.el.exec.ShopList" p:allGoods="#{its.![goods]}"/>
+    <bean id="list12" class="com.el.exec.ShopList" p:allGoods="#{its.?[weight gt 3.5].![goods]}"/>
+
+
+
+
+</beans>

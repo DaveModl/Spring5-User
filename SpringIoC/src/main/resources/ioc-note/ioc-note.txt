@@ -1,0 +1,73 @@
+IoC
+依赖注入与控制反转
+Dependency Injection:
+依赖注入和控制反转,本质上是一回事
+一个对象应用另一个对象的特殊能力，基本思想把类的依赖从类的内部
+转移到外部减少依赖
+反射：运行状态，动态获取类属性
+工厂模式:IoC容器工厂
+
+配置方式1.xml,2.注解
+
+实例化bean
+1.构造函数
+2.静态工厂
+3.工厂
+
+class属性使用方式
+1.反射
+2.静态工厂
+
+注入方式
+构造器
+setter
+
+属性配置:
+<property>  ==  p:
+
+
+bean的作用域
+singleton
+prototype
+request --Http请求
+session --Http会话
+application --ServletContext实例
+webSocket --WebSocket实例
+
+bean的生命周期
+控制bean生命周期的三种行为、
+1.InitializingBean/DisposableBean回调接口
+2.自定义init()/destroy()
+3.@PostConstruct/@PerDestroy
+__________________________________________
+多个生命周期控制，执行顺序
+@PostConstruct
+InitializingBean接口afterPropertiesSet()
+init()
+@PerDestroy
+DisposableBean接口destroy()
+destroy()
+________________________________
+@Configuration
+@ComponentScan
+@Bean
+@Scope
+@Required 表示这个bean在需要注入
+@Autowired 自动注入
+@Qualifier设置注入bean的名称
+@Primary 设置一个bean优先级
+@Resource设置bean的名称
+@PostConstruct/@PreDestroy
+@Component
+@Service
+@Repository
+______________________________________________________
+Java注解
+@Inject
+@Named/@MangedBean
+@Import
+@ImportResource
+__________________________________________________
+@Profile配置环境
+@PropertySource
+

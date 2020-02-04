@@ -1,0 +1,62 @@
+DispatcherServlet
+
+Servlet WebApplicationContext
+(Controller viewResolver HandleMapping)
+
+Root WebApplicationContext
+(Services Repositories)
+
+DispatcherServlet --- DispatcherHandle
+bean类型说明
+HandlerAdapter 映射请求处理器
+HandleMapping(请求映射处理拦截器)
+RequestMappingHandleMapping
+SimpleUrlHandleMapping
+@RequestMapping
+
+HandlerExceptionResolver
+
+
+视图解析
+ViewResolver
+ThemeResolver
+LocaleResolver LocaleContextResolver
+
+文件上传
+MultipartResolver
+
+FlashMapManager
+
+处理流程
+1.搜索绑定WebApplicationContext
+2.语言环境解析，可跳过
+3.解析器选择哪个主题 可跳过
+4.指定multipart文件相关解析器
+5.搜索适当处理器处理
+6.返回模型，呈现视图
+
+HandleMapping(请求映射处理拦截器)
+preHandle()
+postHandle()
+afterCompletion()
+遵循责任链模式
+
+ViewResolver(视图解析)
+
+重定向 redirect:   --- UrlBasedViewResolver识别指令
+请求转发forward: --- RequestDispatcger.forward() InternalResourceView
+内容协商 --- Accept报头信息确定(Content-Type) --- ContentNegotiatingViewResolver
+
+cookie解析器CookieLocaleResolver
+SessionLocaleResolver
+
+异步请求处理
+Servlet接收到请求后，先对请求携带的数据进行预处理
+Servlet将请求壮发给一个异步线程来执行异步处理，线程本身返回容器
+处理完成返回数据，或者转发给其他servlet
+
+DeferredResult/Callable返回值为单个一部返回值提供支持
+Controller 可以传递多个值 SSE/原始数据
+controller 响应客户端并返回返回响应处理的类型
+
+
